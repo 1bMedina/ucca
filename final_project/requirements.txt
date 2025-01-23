@@ -1,0 +1,4 @@
+Django~=5.1.2
+psycopg2~=2.9.10
+psycopg2-binary~=2.9.10
+django-registration~=5.1.0

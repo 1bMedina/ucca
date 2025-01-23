@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    <title> Register - UCCA </title>
+{% endblock title %}
+
+{% block content %}
+<!--    {% if messages %}-->
+<!--        {% for message in messages %}-->
+<!--            <p>{{ message }}</p>-->
+<!--        {% endfor %}-->
+<!--    {% endif %}-->
+
+    <div class="container">
+        <form method="POST" class="form-1">
+            {% csrf_token %}
+            {{ register_form.as_p }}
+            <button type="submit" >Register</button>
+        </form>
+    </div>
+{% endblock content %}
