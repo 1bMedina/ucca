@@ -6,6 +6,7 @@
 {% endblock title %}
 
 {% block content %}
+
     {% if messages %}
         {% for message in messages %}
             <div class="alert alert-warning alert-dismissible fade show" role="alert" style="background-color: #ff69b4;">
@@ -14,5 +15,39 @@
             </div>
         {% endfor %}
     {% endif %}
-    <p>hello forms</p>
+
+        <br>
+
+    <form method="POST" clsss="container" action="{% url 'form' %}" >
+        {% csrf_token %}
+        {{ stove_form }}
+{#        <button type="submit" class="btn btn-outline-success mb-5" >Submit</button>#}
+    </form>
+
+
+
+    <br>
+ <table class="container table table-striped table-hover">
+  <thead>
+    <tr>
+
+      <th scope="col">URL</th>
+      <th scope="col">Experience</th>
+      <th scope="col">Location</th>
+        <th scope="col">Use</th>
+    </tr>
+  </thead>
+  <tbody>
+        {% for obj in all_stoves %}
+    <tr>
+      <td>{{ obj.stove_url}}</td>
+      <td>{{ obj.experience }}</td>
+      <td>{{ obj.stove_location }}</td>
+      <td>{{ obj.use }}</td>
+    </tr>
+ {% endfor %}
+  </tbody>
+</table>
+
+
 {% endblock content %}

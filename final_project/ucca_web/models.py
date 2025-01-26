@@ -59,6 +59,9 @@ class Stoves(models.Model):
     stove_location =  models.CharField(max_length=3, choices=LOCATION_CHOICES)
     use = models.CharField(max_length=7, choices=USE_CHOICES)
 
+    def __str__(self):
+        return self.stove_url
+
 class Materials(models.Model):
     material_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     stove_id = models.ForeignKey(Stoves, on_delete=models.CASCADE)

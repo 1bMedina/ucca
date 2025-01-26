@@ -13,7 +13,3 @@ def register(request):
     else:
         register_form = CustomRegisterForm()
     return render(request, 'users_app/register.html', {'register_form': register_form})
-
-def logout(request):
-    logout(request)
-    return render(request, 'users_app/logout.html')

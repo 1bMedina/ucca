@@ -14,9 +14,10 @@
     <nav style="padding: 20px 0px 15px; margin: 0 auto;">
         <ul>
             <li><a class="button" href="{% url 'index' %}">Home</a></li>
-            <li><a class="button" href="{% url 'about' %}">About Us</a></li>
+{#            <li><a class="button" href="{% url 'about' %}">About Us</a></li>#}
             <li><a class="button" href="{% url 'form' %}">Form</a></li>
             <li><a class="button" href="{% url 'login' %}">Login</a></li>
+{#            <form  method="POST"><li><a class="button" href="{% url 'logout' %}">Logout</a></li></form>#}
         </ul>
     </nav>
     {% block content %}
