@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ucca_web',
     'users_app',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -125,6 +127,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 # StaticRoot = BASE_DIR / 'static'
 STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static'))]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+LOGIN_REDIRECT_URL = 'form'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

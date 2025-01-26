@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %}
 
 {% block title %}
-    <title> Register - UCCA </title>
+    <title> Login - UCCA </title>
 {% endblock title %}
 
 {% block content %}
@@ -10,7 +10,7 @@
 
     <div class="container">
     <br>
-        <h2>Register for UCCA</h2>
+        <h2>Login to UCCA</h2>
 
         {% if messages %}
             {% for message in messages %}
@@ -23,8 +23,10 @@
 
         <form method="POST" class="form-1 col-6">
             {% csrf_token %}
-            {{ register_form|crispy }}
-            <button type="submit" class="btn btn-outline-success mb-5" >Register</button>
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-outline-success mb-5" >Login</button>
+            <br>
+{#            <a class="btn btn-outline-secondary btn-sm" {% url register %} }>Need an account? Register here!</a>#}
         </form>
     </div>
 {% endblock content %}
