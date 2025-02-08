@@ -1,0 +1,95 @@
+@font-face {
+  font-family: matcha;
+    src: url(/static/fonts/Good_Matcha.woff);
+}
+body {
+    background: #FFFCF2;
+    font-size: 16px;
+}
+
+#area {
+    height: 350px;
+    width: 100vw;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+#button-1 {
+    margin: 150px;
+    height: 350px;
+    width: 375px;
+    border-radius: 10%;
+    border: none;
+    background-color: #403D39;
+}
+#button-2 {
+    margin: 150px;
+    height: 350px;
+    width: 375px;
+    border-radius: 10%;
+    border: none;
+    background-color: #403D39;
+}
+#button-2 img {
+    position: absolute;
+    left: 73.5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#button-2:hover {
+    transform: scale(.98);
+    background-color: #56544c;
+}
+
+#button-2 img:hover {
+    position: absolute;
+    left: 50.6%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(.98);
+}
+
+#button-1 img {
+    position: absolute;
+    left: 26.5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#button-1:hover {
+    transform: scale(.98);
+    background-color: #56544c;
+}
+
+#button-1 img:hover {
+    position: absolute;
+    left: 50.6%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(.98);
+}
+
+#build {
+    position: absolute;
+    left: 74.2%;
+    top: 63%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #252422;
+    font-family: matcha;
+    letter-spacing: 2px;
+}
+#support {
+    position: absolute;
+    left: 26.5%;
+    top: 63%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #252422;
+    font-family: matcha;
+    letter-spacing: 2px;
+}

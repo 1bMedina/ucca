@@ -20,7 +20,9 @@
 
     <form method="POST" clsss="container" action="{% url 'form' %}" >
         {% csrf_token %}
-        {{ stove_form }}
+        {{ stove_form.experience }}
+        {{ stove_form.location }}
+        {{ stove_form.use }}
 {#        <button type="submit" class="btn btn-outline-success mb-5" >Submit</button>#}
     </form>
 
