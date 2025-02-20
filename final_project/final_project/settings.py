@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'users_app',
     'crispy_forms',
     'crispy_bootstrap5',
-    'django.contrib.auth'
+    'django.contrib.auth',
 ]
 
 MIDDLEWARE = [
@@ -81,8 +81,8 @@ WSGI_APPLICATION = 'final_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'bmedina',
-        'USER': 'bmedina',
+        'NAME': 'mmccormack',
+        'USER': 'mmccormack',
         'PASSWORD': os.getenv('PGPASSWORD'),
         'HOST': 'dbserver.gctaa.net',
         'PORT': '5432',
@@ -137,12 +137,8 @@ LOGIN_REDIRECT_URL = 'form'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+AUTH_USER_MODEL = "ucca_web.CustomUser"
+
 # LOGIN_REDIRECT_URL = 'index'
 #
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'blucmedina@gmail.com'
-# EMAIL_HOST_PASSWORD = os.getenv('EMPASSWORD')
 
